@@ -28,6 +28,7 @@ const SearchResults: React.FC<{
     <>
       <div className="w-full h-full flex-1 grid">
         <Virtuoso
+          increaseViewportBy={500}
           style={{ height: '100%' }}
           data={props.items}
           endReached={props.loadMore}
