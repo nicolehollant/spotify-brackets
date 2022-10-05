@@ -283,7 +283,7 @@ const Round: React.FC<{
               src={props.labels[props.matches[currentMatch] - 1]?.albumArtTiny}
               className="absolute  w-full h-full object-cover filter blur-xl"
             />
-            <div className="p-8 h-full z-10 ml-auto ">
+            <div className="p-8 h-full z-10 ml-auto relative">
               <img
                 src={props.labels[props.matches[currentMatch] - 1]?.albumArt}
                 className="h-full shadow-lg border border-black/10"
@@ -320,7 +320,7 @@ const Round: React.FC<{
               src={props.labels[props.matches[currentMatch + 1] - 1]?.albumArtTiny}
               className="absolute  w-full h-full object-cover filter blur-xl"
             />
-            <div className="p-8 h-full z-10 mr-auto ">
+            <div className="p-8 h-full z-10 mr-auto relative">
               <img
                 src={props.labels[props.matches[currentMatch + 1] - 1]?.albumArt}
                 className="h-full shadow-lg border border-black/10"
