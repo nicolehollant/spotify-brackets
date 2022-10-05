@@ -17,7 +17,11 @@ const Home: NextPage = () => {
   const songs = trpc.useQuery(['auth.spotifyGetSongsByPlaylistID', (Array.isArray(id) ? id[0] : id ?? '') as string])
 
   if (status === 'loading') {
-    return <div>loading...</div>
+    return (
+      <div className="bg-slate-900 h-full w-full flex flex-col gap-8 text-white items-center justify-center text-lg">
+        <div>loading...</div>
+      </div>
+    )
   }
 
   if (status === 'unauthenticated' || songs.isError) {
@@ -25,7 +29,11 @@ const Home: NextPage = () => {
   }
 
   if (!songs.data) {
-    return <p>loading...</p>
+    return (
+      <div className="bg-slate-900 h-full w-full flex flex-col gap-8 text-white items-center justify-center text-lg">
+        <div>loading...</div>
+      </div>
+    )
   }
 
   return (
