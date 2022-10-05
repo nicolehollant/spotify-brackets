@@ -365,7 +365,7 @@ const Round: React.FC<{
           <div className="z-50 fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 tracking wide text-2xl font-bold bg-slate-700/30 rounded backdrop-blur backdrop-filter border-4 border-black px-6 py-2 grid place-items-center gap-2">
             <p className="animate-pulse text-center">Skipping Byes...</p>
             <p className="text-center text-xs text-white/80 w-56">
-              If a bracket doesn't have enough entries, the most popular songs skip to a future round
+              If a bracket doesn&apos;t have enough entries, the most popular songs skip to a future round
             </p>
           </div>
         </>
