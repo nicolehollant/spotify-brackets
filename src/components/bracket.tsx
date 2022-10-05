@@ -281,12 +281,12 @@ const Round: React.FC<{
           <div className="bg-white flex items-center justify-center h-full w-full relative">
             <img
               src={props.labels[props.matches[currentMatch] - 1]?.albumArtTiny}
-              className="absolute  w-full h-full object-cover filter blur-xl"
+              className="absolute  w-full h-full object-cover filter blur-xl z-0"
             />
             <div className="p-8 h-full z-10 ml-auto relative">
               <img
                 src={props.labels[props.matches[currentMatch] - 1]?.albumArt}
-                className="h-full shadow-lg border border-black/10"
+                className="h-full shadow-lg border border-black/10 z-10 relative"
               />
             </div>
             <div className="absolute top-1/2 left-1/2 transform -translate-y-1/2  -translate-x-1/2 z-30">
@@ -318,12 +318,12 @@ const Round: React.FC<{
           <div className="bg-blue-600/40 flex items-center justify-center h-full w-full relative">
             <img
               src={props.labels[props.matches[currentMatch + 1] - 1]?.albumArtTiny}
-              className="absolute  w-full h-full object-cover filter blur-xl"
+              className="absolute  w-full h-full object-cover filter blur-xl z-0"
             />
             <div className="p-8 h-full z-10 mr-auto relative">
               <img
                 src={props.labels[props.matches[currentMatch + 1] - 1]?.albumArt}
-                className="h-full shadow-lg border border-black/10"
+                className="h-full shadow-lg border border-black/10 z-10 relative"
               />
             </div>
             <div className="absolute top-1/2 left-1/2 transform -translate-y-1/2  -translate-x-1/2 z-30">
