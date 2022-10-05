@@ -286,11 +286,13 @@ const Round: React.FC<{
               />
               <div className="absolute inset-0 z-1 backdrop-filter backdrop-blur-xl bg-black/20"></div>
             </div>
-            <div className="p-8 h-full z-10 ml-auto relative">
-              <img
-                src={props.labels[props.matches[currentMatch] - 1]?.albumArt}
-                className="h-full shadow-lg border border-black/10 z-10 relative"
-              />
+            <div className="p-8 h-full z-10 ml-auto relative filter-none opacity-[0.99] transform">
+              {props.labels[props.matches[currentMatch] - 1]?.albumArt && (
+                <img
+                  src={props.labels[props.matches[currentMatch] - 1]?.albumArt}
+                  className="h-full shadow-lg border border-black/10 z-10 relative filter-none"
+                />
+              )}
             </div>
             <div className="absolute top-1/2 left-1/2 transform -translate-y-1/2  -translate-x-1/2 z-30">
               <AudioPlayer
@@ -326,11 +328,13 @@ const Round: React.FC<{
               />
               <div className="absolute inset-0 z-1 backdrop-filter backdrop-blur-xl bg-black/20"></div>
             </div>
-            <div className="p-8 h-full z-10 mr-auto relative">
-              <img
-                src={props.labels[props.matches[currentMatch + 1] - 1]?.albumArt}
-                className="h-full shadow-lg border border-black/10 z-10 relative"
-              />
+            <div className="p-8 h-full z-10 mr-auto relative filter-none opacity-[0.99] transform">
+              {props.labels[props.matches[currentMatch + 1] - 1]?.albumArt && (
+                <img
+                  src={props.labels[props.matches[currentMatch + 1] - 1]?.albumArt}
+                  className="h-full shadow-lg border border-black/10 z-10 relative filter-none"
+                />
+              )}
             </div>
             <div className="absolute top-1/2 left-1/2 transform -translate-y-1/2  -translate-x-1/2 z-30">
               <AudioPlayer
