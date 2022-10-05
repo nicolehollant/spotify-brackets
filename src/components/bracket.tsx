@@ -276,7 +276,7 @@ const Round: React.FC<{
 
   return (
     <>
-      <section className="h-screen fixed inset-0 grid grid-rows-2">
+      <section className="h-full overflow-auto fixed inset-0 grid grid-rows-2">
         <div className="h-full">
           <div className="bg-white flex items-center justify-center h-full w-full relative">
             <img
@@ -411,7 +411,11 @@ const Bracket: React.FC<{
   }, [session])
 
   if (status === 'loading') {
-    return <div>loading...</div>
+    return (
+      <div className="bg-slate-900 h-full w-full flex flex-col gap-8 text-white items-center justify-center text-lg">
+        <div>loading...</div>
+      </div>
+    )
   }
 
   if (status === 'unauthenticated') {
@@ -426,7 +430,7 @@ const Bracket: React.FC<{
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className="bg-slate-900 min-h-screen w-full flex flex-col gap-8 text-white">
+      <div className="bg-slate-900 h-full w-full flex flex-col gap-8 text-white">
         {/* active round */}
         {winner == null && (
           <Round labels={props.songs} matches={matches} round={currentRound} onComplete={onCompleteRound}></Round>
