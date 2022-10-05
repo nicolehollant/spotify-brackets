@@ -279,10 +279,13 @@ const Round: React.FC<{
       <section className="h-full overflow-auto fixed inset-0 grid grid-rows-2">
         <div className="h-full">
           <div className="bg-white flex items-center justify-center h-full w-full relative">
-            <img
-              src={props.labels[props.matches[currentMatch] - 1]?.albumArtTiny}
-              className="absolute  w-full h-full object-cover filter blur-xl z-0"
-            />
+            <div className="absolute w-full h-full z-0">
+              <img
+                src={props.labels[props.matches[currentMatch] - 1]?.albumArtTiny}
+                className="absolute  w-full h-full object-cover z-0"
+              />
+              <div className="absolute inset-0 z-1 backdrop-filter backdrop-blur-xl bg-black/20"></div>
+            </div>
             <div className="p-8 h-full z-10 ml-auto relative">
               <img
                 src={props.labels[props.matches[currentMatch] - 1]?.albumArt}
@@ -316,10 +319,13 @@ const Round: React.FC<{
         </div>
         <div className="h-full">
           <div className="bg-blue-600/40 flex items-center justify-center h-full w-full relative">
-            <img
-              src={props.labels[props.matches[currentMatch + 1] - 1]?.albumArtTiny}
-              className="absolute  w-full h-full object-cover filter blur-xl z-0"
-            />
+            <div className="absolute w-full h-full z-0">
+              <img
+                src={props.labels[props.matches[currentMatch + 1] - 1]?.albumArtTiny}
+                className="absolute  w-full h-full object-cover z-0"
+              />
+              <div className="absolute inset-0 z-1 backdrop-filter backdrop-blur-xl bg-black/20"></div>
+            </div>
             <div className="p-8 h-full z-10 mr-auto relative">
               <img
                 src={props.labels[props.matches[currentMatch + 1] - 1]?.albumArt}

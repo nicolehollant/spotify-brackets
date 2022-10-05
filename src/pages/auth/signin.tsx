@@ -14,7 +14,7 @@ const Icons: Record<string, JSX.Element> = {
   GitHub: <FontAwesomeIcon icon={faGithub} size="lg" />,
   Twitter: <FontAwesomeIcon icon={faTwitter} size="lg" />,
   Spotify: <FontAwesomeIcon icon={faSpotify} size="lg" />,
-  'Twitter (Legacy)': <FontAwesomeIcon icon={faTwitter} size="lg" />,
+  'Twitter (Legacy)': <FontAwesomeIcon icon={faTwitter} size="lg" style={{ maxWidth: '3rem' }} />,
 }
 
 interface SignInProps {
